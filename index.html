@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Обратная связь</h1>
+    </header>
+
+    <section class="contact-form">
+        <form id="contact-form" onsubmit="sendEmail(event)">
+            <h2>Форма для обратной связи</h2>
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Почта</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Отправить</button>
+            <p id="warning-text" style="display: none; color: #f39c12;">Пожалуйста, подождите, пока ваше сообщение не будет отправлено.</p>
+        </form>
+    </section>    
+
+    <div class="social-links">
+        <p>СОЦИАЛЬНЫЕ СЕТИ</p>
+        <a href="https://vk.com/mittory"><i class="fab fa-vk"></i> VK</a>
+        <a href="https://t.me/MITTORY"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    </div>
+
+</body>
+</html>
