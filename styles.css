@@ -12,10 +12,10 @@ header {
     margin-bottom: 40px;
     padding: 50px 0;
     background-color: #1e1e1e;
-    border-radius: 10px;
 }
 
 header h1 {
+    color: #f39c12;
     margin: 0;
     font-size: 3em;
 }
@@ -27,16 +27,23 @@ header p {
 
 .social-links {
     text-align: center;
-    margin: 20px 0;
+    margin: auto;
+    margin-top: 40px;
+    display: block;
+    position: relative;
+    background-color: #1e1e1e;
+    height: 160px;
 }
 
 .social-links p {
-    text-decoration-line: underline;
+    text-decoration-line: none;
+    padding-top: 50px;
     text-align: center;
     color: #f39c12;
 }
 
 .social-links a {
+    text-align: center;
     margin: 0 10px;
     color: #ffffff;
     text-decoration: none;
@@ -52,18 +59,15 @@ header p {
     margin: 0 auto;
     padding: 50px;
     background-color: #1e1e1e;
-    border-radius: 45px;
+    border-radius: 30px;
+    border-color: #2c2c2c;
+    border-style: dashed;
 }
 
 .contact-form p {
     margin-top: 40px;
     margin-bottom: -40px;
     text-align: center;
-}
-
-.contact-form h2 {
-    text-align: center;
-    margin-top: -20px;
 }
 
 .contact-form label {
@@ -75,8 +79,9 @@ header p {
     max-width: 100%;
     min-width: 100%;
     padding: 10px;
+    border-color: #e77e22;
+    border-style: dashed;
     margin-bottom: 10px;
-    border: none;
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
@@ -92,7 +97,7 @@ header p {
     border: none;
     border-radius: 4px;
     background-color: #f39c12;
-    color: #ffffff;
+    color: #332c2c;
     font-size: 1em;
     font-weight: bold;
 }
