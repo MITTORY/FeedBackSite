@@ -13,28 +13,32 @@
 
     <header>
         <h1>ОБРАТНАЯ СВЯЗЬ</h1>
-        <p>ВЫ МОЖЕТЕ СВЯЗАТЬСЯ СО МНОЙ, ЗАПОЛНИВ ФОРМУ НИЖЕ или ЧЕРЕЗ СОЦИАЛЬНЫЕ СЕТИ</p>
+        <p>ВЫ МОЖЕТЕ СВЯЗАТЬСЯ СО МНОЙ, ЗАПОЛНИВ ФОРМУ НИЖЕ ИЛИ ЧЕРЕЗ СОЦИАЛЬНЫЕ СЕТИ</p>
     </header>
 
     <section class="contact-form">
-        <form id="contact-form" onsubmit="sendEmail(event)">
+        <form id="contact-form" enctype="multipart/form-data" method="post" onsubmit="sendEmail(event)">
             <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="from_name" required>
+        
             <label for="email">Почта</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email_from" required>
+        
             <label for="message">Сообщение</label>
             <textarea id="message" name="message" rows="5" required></textarea>
+            <p>Если вы хотите отправить фото или файл, укажите ссылку на файл в сообщении</p>
+        
             <button type="submit" id="submit-button">Отправить</button>
-            <p id="warning-text" style="display: none; color: #f39c12;">Пожалуйста, подождите, пока ваше сообщение не будет отправлено.</p>
-        </form>
+            <p id="warning-text" style="display: none; color: #f39c12;">Пожалуйста, подождите, пока ваше сообщение будет отправлено.</p>
+        </form>        
     </section>      
 
-    <div class="social-links">
-        <p>СОЦИАЛЬНЫЕ СЕТИ</p>
+    <footer class="social-links">
+    <div>
         <a href="https://vk.com/mittory"><i class="fab fa-vk"></i> VK</a>
         <a href="https://t.me/MITTORY"><i class="fab fa-telegram-plane"></i> Telegram</a>
         <a href="https://discord.gg/EJYhtgUDvW"><i class="fab fa-discord"></i> Discord</a>
     </div>
-
+    </footer>
 </body>
 </html>
