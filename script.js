@@ -22,18 +22,22 @@ function recordMessage() {
     localStorage.setItem('messages', JSON.stringify(messages));
 }
 
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 function sendEmail(event) {
     event.preventDefault();
     const warningText = document.getElementById('warning-text');
     const submitButton = document.getElementById('submit-button');
-    const preloader = document.getElementById('preloader'); // Получаем элемент прелоадера
+    const preloader = document.getElementById('preloader');
 
     if (!canSendMessage()) {
         alert('Вы превысили лимит отправки сообщений. Попробуйте позже.');
         return;
     }
 
-    // Показать прелоадер и скрыть кнопку отправки
     preloader.style.display = 'flex';
     submitButton.disabled = true;
     warningText.style.display = 'block';
@@ -43,6 +47,7 @@ function sendEmail(event) {
     const templateParams = {
         from_name: document.getElementById('name').value,
         email_from: document.getElementById('email').value,
+        category: document.getElementById('category').value, // Добавляем категорию
         message: document.getElementById('message').value
     };
 
@@ -50,14 +55,12 @@ function sendEmail(event) {
         .then(response => {
             alert('Сообщение отправлено успешно!');
             document.getElementById('contact-form').reset();
-            // Скрыть прелоадер и кнопку отправки
             preloader.style.display = 'none';
             warningText.style.display = 'none';
             submitButton.disabled = false;
             recordMessage();
         }, error => {
             alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз позже.');
-            // Скрыть прелоадер и кнопку отправки
             preloader.style.display = 'none';
             warningText.style.display = 'none';
             submitButton.disabled = false;

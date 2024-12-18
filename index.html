@@ -24,9 +24,18 @@
             <label for="name">Ваше имя</label>
             <input type="text" id="name" name="from_name" required>
         
-            <label for="email">Почта</label>
+            <label for="email">Почта для обратной связи</label>
             <input type="email" id="email" name="email_from" required>
         
+            <label for="category">Причина обращения</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Выберите категорию</option>
+                <option value="Вопрос">Вопрос</option>
+                <option value="Отзыв">Отзыв</option>
+                <option value="Ошибка">Ошибка</option>
+                <option value="Предложение">Предложение</option>
+            </select>            
+
             <label for="message">Сообщение</label>
             <textarea id="message" name="message" rows="5" required></textarea>
             <p>Если вы хотите отправить фото или файл, укажите ссылку на файл в сообщении</p>
