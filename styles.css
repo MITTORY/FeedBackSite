@@ -27,7 +27,7 @@ header {
 
 header h1 {
     color: #e77e22;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     margin: 0px;
     margin-top: -15px;
     font-size: 3em;
@@ -35,7 +35,7 @@ header h1 {
 
 header p {
     color: #7c7a7a;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     margin: 0;
     margin-top: 5px;
     font-size: 1em;
@@ -54,7 +54,7 @@ header p {
 }
 
 .contact-form label {
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-weight: bold;
     font-size: x-large;
     display: block;
@@ -70,7 +70,7 @@ header p {
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-size: large;
 }
 
@@ -84,7 +84,7 @@ header p {
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-size: large;
 }
 
@@ -101,12 +101,12 @@ header p {
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-size: large;
 }
 
 .contact-form textarea + p {
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-size: 1.1em;
     color: #8f8e8e;
     margin-top: -5px;
@@ -123,7 +123,7 @@ header p {
     border-radius: 4px;
     background-color: #f39c12;
     color: #332c2c;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-size: 1.2em;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -146,7 +146,7 @@ header p {
 #warning-text { 
     display: none;/* По умолчанию скрыто */
     color: #f39c12; /* Яркий оранжевый цвет текста */
-    font-family: 'TT Milks', Arial, sans-serif; /* Ваш шрифт */
+    font-family: 'TT Milks'; /* Ваш шрифт */
     font-size: 1.2em; /* Размер шрифта чуть больше стандартного */
     font-weight: bold; /* Жирный текст */
     text-align: center; /* Выравнивание по центру */
@@ -175,7 +175,7 @@ header p {
 #success-text {
     display: none; /* По умолчанию скрыто */
     color: #ffffff; /* Белый цвет текста для хорошей читаемости */
-    font-family: 'TT Milks', Arial, sans-serif; /* Ваш шрифт */
+    font-family: 'TT Milks'; /* Ваш шрифт */
     font-size: 1.2em; /* Размер шрифта чуть больше стандартного */
     font-weight: bold; /* Жирный текст */
     text-align: center; /* Выравнивание по центру */
@@ -207,7 +207,7 @@ header p {
 
 #limit-text {
     color: #f39c12; /* Яркий оранжевый цвет текста */
-    font-family: 'TT Milks', Arial, sans-serif; /* Ваш шрифт */
+    font-family: 'TT Milks'; /* Ваш шрифт */
     font-size: 1.2em; /* Размер шрифта чуть больше стандартного */
     font-weight: bold; /* Жирный текст */
     text-align: center; /* Выравнивание по центру */
@@ -234,7 +234,7 @@ footer {
 
 footer p {
     margin: 10px 10px;
-    font-family: 'TT Milks', Arial, sans-serif;
+    font-family: 'TT Milks';
     font-size: x-large;
     color: #f39c12;
 }
