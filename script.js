@@ -2,7 +2,7 @@
     emailjs.init("HmeQxflwNW3b4DpvT");
 })();
 
-const MESSAGE_LIMIT = 3;
+const MESSAGE_LIMIT = 30;
 const TIME_FRAME = 12 * 60 * 60 * 1000;
 
 function canSendMessage() {
@@ -52,24 +52,30 @@ function sendEmail(event) {
     };
 
     emailjs.send(serviceID, templateID, templateParams)
-        .then(response => {
-            alert('Сообщение отправлено успешно!');
-            document.getElementById('contact-form').reset();
-            preloader.style.display = 'none';
-            warningText.style.display = 'none';
-            submitButton.disabled = false;
-            recordMessage();
-        }, error => {
-            alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз позже.');
-            preloader.style.display = 'none';
-            warningText.style.display = 'none';
-            submitButton.disabled = false;
-        });
+    .then(response => {
+        const successText = document.getElementById('success-text');
+        successText.style.display = 'block';
+        document.getElementById('contact-form').reset();
+        preloader.style.display = 'none';
+        warningText.style.display = 'none';
+        submitButton.disabled = false;
+        recordMessage();
+
+        // Убираем уведомление через несколько секунд
+        setTimeout(() => {
+            successText.style.display = 'none';
+        }, 3000);
+    }, error => {
+        alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз позже.');
+        preloader.style.display = 'none';
+        warningText.style.display = 'none';
+        submitButton.disabled = false;
+    });
 }
 
-// window.onload = function() {
-//     alert('Вы можете отправить только одно сообщение в день.');
-// };
+window.onload = function() {
+    alert('Вы можете отправить только три сообщение в день!');
+};
 
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
