@@ -2,7 +2,7 @@
     emailjs.init("HmeQxflwNW3b4DpvT");
 })();
 
-const MESSAGE_LIMIT = 10;
+const MESSAGE_LIMIT = 1;
 const TIME_FRAME = 24 * 60 * 60 * 1000;
 
 function canSendMessage() {
