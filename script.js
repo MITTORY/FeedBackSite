@@ -47,7 +47,7 @@ function sendEmail(event) {
     const templateParams = {
         from_name: document.getElementById('name').value,
         email_from: document.getElementById('email').value,
-        category: document.getElementById('category').value, // Добавляем категорию
+        category: document.getElementById('category').value,
         message: document.getElementById('message').value
     };
 
@@ -67,9 +67,9 @@ function sendEmail(event) {
         });
 }
 
-window.onload = function() {
-    alert('Вы можете отправить только одно сообщение в день.');
-};
+// window.onload = function() {
+//     alert('Вы можете отправить только одно сообщение в день.');
+// };
 
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
