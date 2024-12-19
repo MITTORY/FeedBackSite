@@ -281,7 +281,9 @@ footer a:hover {
 
 @font-face {
     font-family: 'TT Milks';
-    src: url('path-to-your-font/TTMilks-Regular.ttf') format('truetype');
+    src: url('font/TTMilks-Regular.ttf') format('truetype');
+    src: url('font/TTMilks-Regular.woff2') format('woff2');
+    src: url('font/TTMilks-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
