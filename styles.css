@@ -27,7 +27,7 @@ header {
 
 header h1 {
     color: #e77e22;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     margin: 0px;
     margin-top: -15px;
     font-size: 3em;
@@ -35,7 +35,7 @@ header h1 {
 
 header p {
     color: #7c7a7a;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     margin: 0;
     margin-top: 5px;
     font-size: 1em;
@@ -54,7 +54,7 @@ header p {
 }
 
 .contact-form label {
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-weight: bold;
     font-size: x-large;
     display: block;
@@ -70,7 +70,7 @@ header p {
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-size: large;
 }
 
@@ -84,7 +84,7 @@ header p {
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-size: large;
 }
 
@@ -100,17 +100,17 @@ header p {
     border-radius: 10px;
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-size: large;
 }
 
 .contact-form textarea + p {
     color: #ffffff;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-size: 1.1em;
     color: #8f8e8e;
-    margin-top: -5px; /* Небольшой отступ сверху */
-    margin-bottom: 20px; /* Отступ снизу */
+    margin-top: -5px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -123,11 +123,11 @@ header p {
     border-radius: 4px;
     background-color: #f39c12;
     color: #332c2c;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-size: 1.2em;
     font-weight: bold;
-    transition: all 0.3s ease; /* Плавный переход */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для выпуклости */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Эффект при наведении */
@@ -157,7 +157,7 @@ footer {
 
 footer p {
     margin: 10px 10px;
-    font-family: TT Milks;
+    font-family: 'TT Milks', Arial, sans-serif;
     font-size: x-large;
     color: #f39c12;
 }
@@ -200,4 +200,63 @@ footer a:hover {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@font-face {
+    font-family: 'TT Milks';
+    src: url('path-to-your-font/TTMilks-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общие стили остаются */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Уменьшаем размер заголовка */
+    }
+
+    header p {
+        font-size: 0.9em; /* Уменьшаем размер текста */
+    }
+
+    .contact-form {
+        width: 90%; /* Уменьшаем ширину формы для мобильных экранов */
+        padding: 20px; /* Уменьшаем отступы */
+        margin-top: 20px;
+        border-radius: 20px; /* Слегка уменьшаем радиус */
+    }
+
+    .contact-form label {
+        font-size: large; /* Уменьшаем шрифт */
+    }
+
+    .contact-form select,
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Полная ширина */
+        font-size: medium; /* Уменьшаем размер текста */
+    }
+
+    footer p {
+        font-size: medium; /* Уменьшаем шрифт футера */
+    }
+
+    footer a {
+        font-size: small; /* Уменьшаем ссылки */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Еще меньше для узких экранов */
+    }
+
+    .contact-form {
+        padding: 15px; /* Еще меньше отступы */
+    }
+
+    .contact-form button {
+        font-size: medium; /* Уменьшаем кнопки */
+    }
 }

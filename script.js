@@ -3,7 +3,7 @@
 })();
 
 const MESSAGE_LIMIT = 1;
-const TIME_FRAME = 24 * 60 * 60 * 1000;
+const TIME_FRAME = 12 * 60 * 60 * 1000;
 
 function canSendMessage() {
     const now = Date.now();
