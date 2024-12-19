@@ -1,4 +1,4 @@
-(function() {
+(function () {
     emailjs.init("HmeQxflwNW3b4DpvT");
 })();
 
@@ -30,17 +30,20 @@ function isValidEmail(email) {
 function sendEmail(event) {
     event.preventDefault();
     const warningText = document.getElementById('warning-text');
+    const successText = document.getElementById('success-text');
+    const limitText = document.getElementById('limit-text');
     const submitButton = document.getElementById('submit-button');
     const preloader = document.getElementById('preloader');
 
     if (!canSendMessage()) {
-        alert('Вы превысили лимит отправки сообщений. Попробуйте позже.');
+        limitText.style.display = 'block'; // Показываем предупреждение о лимите
         return;
     }
 
     preloader.style.display = 'flex';
     submitButton.disabled = true;
     warningText.style.display = 'block';
+    limitText.style.display = 'none'; // Скрываем сообщение о лимите
 
     const serviceID = "service_3xn8g5r";
     const templateID = "template_gzvow7i";
@@ -52,32 +55,33 @@ function sendEmail(event) {
     };
 
     emailjs.send(serviceID, templateID, templateParams)
-    .then(response => {
-        const successText = document.getElementById('success-text');
-        successText.style.display = 'block';
-        document.getElementById('contact-form').reset();
-        preloader.style.display = 'none';
-        warningText.style.display = 'none';
-        submitButton.disabled = false;
-        recordMessage();
+        .then(response => {
+            successText.style.display = 'block';
+            document.getElementById('contact-form').reset();
+            preloader.style.display = 'none';
+            warningText.style.display = 'none';
+            submitButton.disabled = false;
+            recordMessage();
 
-        // Убираем уведомление через несколько секунд
-        setTimeout(() => {
-            successText.style.display = 'none';
-        }, 3000);
-    }, error => {
-        alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз позже.');
-        preloader.style.display = 'none';
-        warningText.style.display = 'none';
-        submitButton.disabled = false;
-    });
+            // Убираем успех через 3 секунды, возвращаем сообщение о лимите
+            setTimeout(() => {
+                successText.style.display = 'none';
+                limitText.style.display = 'block'; // Возвращаем сообщение о лимите
+            }, 3000);
+        }, error => {
+            alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз позже.');
+            preloader.style.display = 'none';
+            warningText.style.display = 'none';
+            submitButton.disabled = false;
+        });
 }
 
-window.onload = function() {
-    alert('Вы можете отправить только три сообщение в день!');
+window.onload = function () {
+    const limitText = document.getElementById('limit-text');
+    limitText.style.display = 'block'; // Показываем сообщение о лимите при загрузке
 };
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
 });
